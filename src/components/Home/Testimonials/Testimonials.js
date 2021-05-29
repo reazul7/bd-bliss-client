@@ -21,9 +21,9 @@ const contents = [
 ]
 const Testimonials = () => {
     return (
-        <div>
+        <div class="mt-5">
             <h1>TESTIMONIALS</h1>
-            <div className="container">
+            <div>
                 <div className="row">
                     <div className="col-md-12">
                         <Sliderr classNames={horizontalCss}>

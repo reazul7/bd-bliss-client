@@ -3,7 +3,7 @@ import "./Banner.css";
 
 const Banner = () => {
   return (
-    <div>
+    <div >
       {/* <div className="banner-area-one d-flex align-items-center">
         <div className="container ">
           <div className="row">

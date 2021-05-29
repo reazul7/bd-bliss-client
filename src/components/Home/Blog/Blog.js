@@ -4,8 +4,8 @@ const Blog = () => {
     return (
         <div>
             <h1 className="pt-5">DESIGN BLOG</h1>
-            <div className="container pt-5">
-                <div className="row">
+            <div className="container pt-5 ">
+                <div className="row mb-5">
                     <div className="col-md-4">
                         <img className="card-img-top" src="https://demo1leotheme.b-cdn.net/leo_oobliss_demo/img/leoblog/b/1/9/410_270/b-7.jpg" alt="" />
                         <h5 className="pt-3">NULLAM ULLAMCORPER NISL QUIS ORNARE MOLESTIE</h5>
@@ -26,10 +26,13 @@ const Blog = () => {
                     </div>
                 </div>
 
-                {/* watch our story */}
-                <div className="video-area py-5">
+                 <div className="video-area embed-responsive embed-responsive-1by1 mt-5">
                 <iframe width="1280" height="550" src="https://www.youtube.com/embed/qhe3Hn4sQD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+                    </div>
+{/*
+                <div class="embed-responsive embed-responsive-21by9 mt-5">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qhe3Hn4sQD0"></iframe>
+</div> */}
             </div>
         </div>
     );
