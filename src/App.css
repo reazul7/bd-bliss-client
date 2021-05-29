@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.nav-link{
+  color: black!important;
+}
+.nav-link:hover{
+  color: #ECBA78!important;
+}
+.navbar-nav li{
+  padding-left: 20px;
+}
+
+.btn-area{
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight:  400;
+  font-size: 12px;
+}
+
+
+.btn-blog{
+  background-color: #F6F9FC;
+  border: 1px solid #E1E1E1;
+  border-radius: 15px;
+  padding: 7px 25px;
+}
