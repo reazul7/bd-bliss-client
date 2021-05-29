@@ -1,7 +1,6 @@
 import React from 'react';
 import Sliderr from 'react-animated-slider';
 import horizontalCss from "react-animated-slider/build/horizontal.css";
-import { Button, Carousel } from 'react-bootstrap';
 
 const contents = [
     {
@@ -22,9 +21,9 @@ const contents = [
 ]
 const Testimonials = () => {
     return (
-        <div>
+        <div class="mt-5">
             <h1>TESTIMONIALS</h1>
-            <div className="container">
+            <div>
                 <div className="row">
                     <div className="col-md-12">
                         <Sliderr classNames={horizontalCss}>
@@ -39,44 +38,6 @@ const Testimonials = () => {
                         </Sliderr>
                     </div>
                 </div>
-
-                {/* part-2 */}
-                    <Button>Hi</Button>
-                    <Carousel variant="dark">
-                      <Carousel.Item>
-                        <img
-                          className="d-block w-100"
-                          src="https://demo1leotheme.b-cdn.net/leo_oobliss_demo/79-home_default/hummingbird-printed-t-shirt.jpg"
-                          alt="First slide"
-                        />
-                      <Carousel.Caption>
-                        <h5>First slide label</h5>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                      </Carousel.Caption>
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <img
-                          className="d-block w-100"
-                          src="https://demo1leotheme.b-cdn.net/leo_oobliss_demo/79-home_default/hummingbird-printed-t-shirt.jpg"
-                          alt="First slide"
-                        />
-                      <Carousel.Caption>
-                        <h5>First slide label</h5>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                      </Carousel.Caption>
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <img
-                          className="d-block w-100"
-                          src="https://demo1leotheme.b-cdn.net/leo_oobliss_demo/79-home_default/hummingbird-printed-t-shirt.jpg"
-                          alt="First slide"
-                        />
-                      <Carousel.Caption>
-                        <h5>First slide label</h5>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                      </Carousel.Caption>
-                      </Carousel.Item>
-                    </Carousel>
             </div>
         </div>
     );
