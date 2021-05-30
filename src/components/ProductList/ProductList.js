@@ -23,7 +23,7 @@ const ProductList = () => {
     }, []);
     console.log("products", products);
     return (
-        <div class="mt-5 container">
+        <div className="mt-5 container">
 
             <h1>FEATURED PRODUCTS</h1>
       <p className="pt-2">

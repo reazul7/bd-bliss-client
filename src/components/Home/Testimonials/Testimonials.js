@@ -21,7 +21,7 @@ const contents = [
 ]
 const Testimonials = () => {
     return (
-        <div class="mt-5">
+        <div className="mt-5">
             <h1>TESTIMONIALS</h1>
             <div className="container">
                 <div className="row">
