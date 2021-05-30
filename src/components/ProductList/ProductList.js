@@ -25,12 +25,12 @@ const ProductList = () => {
     return (
         <div class="mt-5 container">
 
-            <h1>FEATURED PRODUCTS</h1>
-      <p class="pt-2">
+            <h1 className="text-center">FEATURED PRODUCTS</h1>
+      <p class="pt-2 text-center">
         For our ten-year anniversary, we're envisioning our best-selling styles..
       </p>
 
-            <div class=" row row-cols-1  row-cols-md-3 g-4 ">
+            <div class=" row row-cols-1  row-cols-md-3 g-0  ">
             {products.map((product) => (
                 <ProductComponent product={product}  key={product.id}></ProductComponent>
             ))}

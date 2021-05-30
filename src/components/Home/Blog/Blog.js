@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div>
+        <div className="text-center" id="blog">
             <h1 className="pt-5">DESIGN BLOG</h1>
             <div className="container pt-5 ">
                 <div className="row mb-5">
