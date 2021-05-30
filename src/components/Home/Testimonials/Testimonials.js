@@ -38,13 +38,6 @@ const Testimonials = () => {
                         </Sliderr>
                     </div>
                 </div>
-
-                {/* responsive qoutes */}
-                <div className="row">
-                  <div className="col-md-12">
-
-                  </div>
-                </div>
             </div>
         </div>
     );
