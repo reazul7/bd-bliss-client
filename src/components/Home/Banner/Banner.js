@@ -28,6 +28,10 @@ const Banner = () => {
           </div>
         </div>
       </div>
+
+
+      {/* banner */}
+
     </div>
   );
 };

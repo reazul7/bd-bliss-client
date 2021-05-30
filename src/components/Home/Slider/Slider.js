@@ -45,8 +45,9 @@ const Slider = () => {
                             background: `url('${item.image}' ) no-repeat center center`,
                             opacity: "0.9",
                             // height: "auto",
-                            width: "100%",
+                            // width: "100%",
                             // backgroundSize: "100% 100%",
+                            maxWidth: "100%",
                         }}
                     >
                         "

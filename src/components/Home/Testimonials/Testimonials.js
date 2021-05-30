@@ -23,7 +23,7 @@ const Testimonials = () => {
     return (
         <div class="mt-5">
             <h1>TESTIMONIALS</h1>
-            <div>
+            <div className="container">
                 <div className="row">
                     <div className="col-md-12">
                         <Sliderr classNames={horizontalCss}>
@@ -37,6 +37,13 @@ const Testimonials = () => {
                             ))}
                         </Sliderr>
                     </div>
+                </div>
+
+                {/* responsive qoutes */}
+                <div className="row">
+                  <div className="col-md-12">
+
+                  </div>
                 </div>
             </div>
         </div>

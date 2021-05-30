@@ -12,5 +12,11 @@
     background-repeat: no-repeat;
     height: 750px;
     text-align: left;
+    background-size: cover;
+    overflow: hidden;
 }
+
+
+/* banner */
+
 
