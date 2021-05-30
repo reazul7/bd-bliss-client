@@ -30,7 +30,7 @@ const ProductComponent = ({ product }) => {
                 <p class="card-text fw-bold">Price: {price}$</p>
                 <p class="card-text">Cetegory: {category}</p>
                 <h6 class="card-text">Product id: {id}</h6>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <button className="btn-card"><a href="#">Go somewhere</a></button>
               </div>
             </div>
           </div>

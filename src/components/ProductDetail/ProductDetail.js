@@ -47,21 +47,46 @@ const ProductDetail = () => {
         //       <a href="#" class="btn btn-primary">Go to Home</a>
         //     </div>
         //   </div>
+        // <div>
+        //   <div class="card mb-3" style={{maxWidth: "540px"}}>
+        //     <div class="row g-0">
+        //       <div class="col-md-4">
+        //         <img src={image} alt="..." />
+        //       </div>
+        //       <div class="col-md-8">
+        //         <div class="card-body">
+        //           <h5 class="card-title">{titiel}</h5>
+        //           <p class="card-text">{price}</p>
+        //           <p class="card-text">
+        //             <small class="text-muted">{category}</small>
+        //           </p>
+        //           <p class="card-text">{description}</p>
+        //           <button className="btn-card"><a href="#">Go to Home</a></button>
+        //         </div>
+        //       </div>
+        //     </div>
+        //   </div>
+        // </div>
+
         <div>
-          <div class="card mb-3" style={{maxWidth: "540px"}}>
+          <div class="card mb-3" style={{ maxWidth: "6000px" }}>
             <div class="row g-0">
               <div class="col-md-4">
-                <img src={image} alt="..." />
+                <img className="img-fluid p-5" src={image} alt="..." />
               </div>
               <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">{titiel}</h5>
-                  <p class="card-text">{price}</p>
-                  <p class="card-text">
-                    <small class="text-muted">{category}</small>
-                  </p>
-                  <p class="card-text">{description}</p>
-                  <a href="#" class="btn btn-primary">Go to Home</a>
+                <div className="pt-5 mt-5">
+                  <div class="card-body p-5">
+                    <p class="card-title">{titiel}</p>
+                    <p class="card-text">{price}</p>
+                    <p class="card-text">
+                      <small class="text-muted">{category}</small>
+                    </p>
+                    <p class="card-text">{description}</p>
+                    <button className="btn-card">
+                      <a href="#">Go to Home</a>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
