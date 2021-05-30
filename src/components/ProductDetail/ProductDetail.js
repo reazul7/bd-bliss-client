@@ -42,7 +42,7 @@ const ProductDetail = () => {
                               <p class="card-text">{category}</p>
                               <p class="card-text">{description}</p>
 
-              <a href="#" class="btn btn-primary">Go to shope</a>
+              <a href="#" class="btn btn-primary">Go to home</a>
             </div>
           </div>
         )}
