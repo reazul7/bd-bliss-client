@@ -26,13 +26,13 @@ const ProductList = () => {
         <div className="mt-5 container">
 
             <h1>FEATURED PRODUCTS</h1>
-      <p className="pt-2">
+      <p class="pt-2">
         For our ten-year anniversary, we're envisioning our best-selling styles.
       </p>
 
-            <div className=" container row row-cols-1 row-cols-md-3 g-4 ">
+            <div class=" row row-cols-1  row-cols-md-3 g-4 ">
             {products.map((product) => (
-                <ProductComponent product={product}></ProductComponent>
+                <ProductComponent product={product}  key={product.id}></ProductComponent>
             ))}
         </div>
         </div>

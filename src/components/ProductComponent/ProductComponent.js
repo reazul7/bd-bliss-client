@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 
 const ProductComponent = ({product}) => {
 //      const products = useSelector((state) => state.allProducts.products);
@@ -24,8 +24,7 @@ const ProductComponent = ({product}) => {
           </div>
           </div>
 
-
-          </Link>
+           </Link>
 
         </div >
 
