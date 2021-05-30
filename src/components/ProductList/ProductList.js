@@ -27,7 +27,7 @@ const ProductList = () => {
 
             <h1>FEATURED PRODUCTS</h1>
       <p class="pt-2">
-        For our ten-year anniversary, we're envisioning our best-selling styles.
+        For our ten-year anniversary, we're envisioning our best-selling styles..
       </p>
 
             <div class=" row row-cols-1  row-cols-md-3 g-4 ">
