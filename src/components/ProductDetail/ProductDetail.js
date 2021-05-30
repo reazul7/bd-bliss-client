@@ -29,20 +29,20 @@ const ProductDetail = () => {
         }
     },[id])
     return (
-        <div class="container">
+        <div className="container">
         <h2>product details</h2>
         {Object.keys(product).length === 0 ? (
             <div>...Loading</div>
         ) : (
-            <div class="card" style= {{width: "18rem", padding:"30px"}} >
-            <img src={image} class="card-img-top" alt="..."/>
-            <div class="card-body">
-                              <h5 class="card-title">{titiel}</h5>
-                              <p class="card-text">{price}</p>
-                              <p class="card-text">{category}</p>
-                              <p class="card-text">{description}</p>
+            <div className="card" style= {{width: "18rem", padding:"30px"}} >
+            <img src={image} className="card-img-top" alt="..."/>
+            <div className="card-body">
+                              <h5 className="card-title">{titiel}</h5>
+                              <p className="card-text">{price}</p>
+                              <p className="card-text">{category}</p>
+                              <p className="card-text">{description}</p>
 
-              <a href="#" class="btn btn-primary">Go to home</a>
+              <a href="#" className="btn btn-primary">Go to home</a>
             </div>
           </div>
         )}

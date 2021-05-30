@@ -39,7 +39,7 @@ const Slider = () => {
             <Sliderr classNames={horizontalCss}>
                 {content.map((item, index) => (
                     <div
-                        class="slide-bg"
+                        className="slide-bg"
                         key={index}
                         style={{
                             background: `url('${item.image}' ) no-repeat center center`,

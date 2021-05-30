@@ -8,19 +8,19 @@ const ProductComponent = ({product}) => {
 //   const renderList = products.map((product) => {
     const { id, title, image, price, category } = product;
     return (
-        <div class="container" >
+        <div className="container" key={id}>
           <Link to={`/product/${id}`}  style={{textDecoration:'none', color:"black"}}>
 
-             <div class="col">
-                <div class="card " style={{height:"33rem", width: '18rem', padding:"20px" }}>
-            <img src={image} class="card-img-top" style={{ height: "150px" }} alt={title} />
-            <div class="card-body">
-              <h5 class="card-title">{title}</h5>
-              <p class="card-text">Price:  {price}$</p>
-              <p class="card-text">Cetegory:  {category}</p>
-              <h6  class="card-text">Product id:  {id}</h6>
-               <a href="#" class="btn btn-primary">Go somewhere</a>
-             </div>
+             <div className="col">
+                <div className="card h-100" style={{ width: '18rem', padding:"22px" }}>
+            <img src={image} className="card-img-top" alt={title} />
+            <div className="card-body">
+              <h5 className="card-title">{title}</h5>
+              <p className="card-text">Price:  {price}$</p>
+              <p className="card-text">Cetegory:  {category}</p>
+              <h6  className="card-text">Product id:  {id}</h6>
+              {/* <a href="#" className="btn btn-primary">Go somewhere</a> */}
+            </div>
           </div>
           </div>
 
