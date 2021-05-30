@@ -26,13 +26,9 @@ const Blog = () => {
                     </div>
                 </div>
 
-                 <div className="video-area embed-responsive embed-responsive-1by1 mt-5">
-                <iframe width="1280" height="550" src="https://www.youtube.com/embed/qhe3Hn4sQD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-{/*
-                <div class="embed-responsive embed-responsive-21by9 mt-5">
-  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qhe3Hn4sQD0"></iframe>
-</div> */}
+                <div className="video-area embed-responsive embed-responsive-1by1 mt-5">
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/qhe3Hn4sQD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     );
