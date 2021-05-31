@@ -11,7 +11,7 @@ const ProductList = () => {
 
     const fetchProducts = async () => {
         const response = await axios
-            .get("https://fakestoreapi.com/products")
+            .get("http://localhost:5050/product")
             .catch((err) => {
                 console.log("err", err);
             });
@@ -23,14 +23,14 @@ const ProductList = () => {
     }, []);
     console.log("products", products);
     return (
-        <div class="mt-5 container">
+        <div class="mt-5 container pt-5 mt-5">
 
-            <h1>FEATURED PRODUCTS</h1>
-      <p class="pt-2">
+            <h1 className="text-center">FEATURED PRODUCTS</h1>
+      <p class="pt-2 text-center">
         For our ten-year anniversary, we're envisioning our best-selling styles..
       </p>
 
-            <div class=" row row-cols-1  row-cols-md-3 g-4 ">
+            <div class=" row row-cols-1  row-cols-md-3 g-0  ">
             {products.map((product) => (
                 <ProductComponent product={product}  key={product.id}></ProductComponent>
             ))}

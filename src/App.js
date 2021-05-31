@@ -6,6 +6,7 @@ import ProductDetail from "./components/ProductDetail/ProductDetail";
 import ProductList from "./components/ProductList/ProductList";
 import { createContext, useState } from "react";
 import Login from "./components/Login/Login";
+import AddProduct from "./components/Home/AddProduct/AddProduct";
 
 export const UserContext = createContext();
 
@@ -24,8 +25,11 @@ function App() {
           <Route path="/product/:id">
             <ProductDetail />
           </Route>
+          <Route path="/addProduct">
+             <AddProduct/>
+          </Route>
           <Route path="/login">
-            <Login></Login>
+            <Login/>
           </Route>
         </Switch>
       </Router>
