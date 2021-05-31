@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { useSelector } from 'react-redux';
+
 
 const ProductComponent = ({ product }) => {
-  //      const products = useSelector((state) => state.allProducts.products);
-  //   // console.log(products)
-  //   const renderList = products.map((product) => {
-  const { id, title, imageURL, price} = product;
+
+   console.log(product)
+
+  const { _id, title, imageURL, price} = product;
   return (
     <div class="container pt-5">
       <Link
-        to={`/product/${id}`}
+        to={`/product/${_id}`}
         style={{ textDecoration: "none", color: "black" }}
       >
          <div class="col">
@@ -21,21 +21,14 @@ const ProductComponent = ({ product }) => {
                 <br/>
               <h4 class="card-text"> {price} </h4>
                <br/>
-               {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
+
              </div>
           </div>
           </div>
       </Link>
     </div>
   );
-  // });
-  //   return (
-  //     <div>
-  //     <div>
-  //    { renderList}
-  //    </div>
-  //     </div>
-  // );
+   
 };
 
 export default ProductComponent;

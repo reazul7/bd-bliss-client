@@ -10,7 +10,7 @@ import {
 
 const ProductDetail = () => {
   const product = useSelector((state) => state.product);
-  const { image, titiel, price, category, description } = product;
+  const { imageURL, title, price, category, description } = product;
   const { id } = useParams();
   console.log(id);
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ const ProductDetail = () => {
 
   const fetchProductDetail = async () => {
     const response = await axios
-      .get(`https://fakestoreapi.com/products/${id}`)
+      .get(`https://obscure-taiga-16258.herokuapp.com/product/${id}`)
       .catch((err) => {
         console.log("err", err);
       });
@@ -36,48 +36,16 @@ const ProductDetail = () => {
       {Object.keys(product).length === 0 ? (
         <div>...Loading</div>
       ) : (
-        //     <div class="card" style= {{width: "18rem", padding:"30px"}} >
-        //     <img src={image} class="card-img-top" alt="..."/>
-        //     <div class="card-body">
-        //                       <h5 class="card-title">{titiel}</h5>
-        //                       <p class="card-text">{price}</p>
-        //                       <p class="card-text">{category}</p>
-        //                       <p class="card-text">{description}</p>
-
-        //       <a href="#" class="btn btn-primary">Go to Home</a>
-        //     </div>
-        //   </div>
-        // <div>
-        //   <div class="card mb-3" style={{maxWidth: "540px"}}>
-        //     <div class="row g-0">
-        //       <div class="col-md-4">
-        //         <img src={image} alt="..." />
-        //       </div>
-        //       <div class="col-md-8">
-        //         <div class="card-body">
-        //           <h5 class="card-title">{titiel}</h5>
-        //           <p class="card-text">{price}</p>
-        //           <p class="card-text">
-        //             <small class="text-muted">{category}</small>
-        //           </p>
-        //           <p class="card-text">{description}</p>
-        //           <button className="btn-card"><a href="#">Go to Home</a></button>
-        //         </div>
-        //       </div>
-        //     </div>
-        //   </div>
-        // </div>
-
         <div>
           <div class="card mb-3" style={{ maxWidth: "6000px" }}>
             <div class="row g-0">
               <div class="col-md-4">
-                <img className="img-fluid p-5" src={image} alt="..." />
+                <img className="img-fluid p-5" src={imageURL} alt="..." />
               </div>
               <div class="col-md-8">
                 <div className="pt-5 mt-5">
                   <div class="card-body p-5">
-                    <p class="card-title">{titiel}</p>
+                    <p class="card-title">{title}</p>
                     <p class="card-text">{price}</p>
                     <p class="card-text">
                       <small class="text-muted">{category}</small>

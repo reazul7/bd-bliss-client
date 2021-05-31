@@ -18,7 +18,7 @@ const AddProduct = () => {
              imageURL:imageURL
         }
         console.log(eventData)
-        const url = `http://localhost:5050/addProduct`
+        const url = `https://obscure-taiga-16258.herokuapp.com/addProduct`
         fetch(url, {
             method: 'POST',
             headers: {
