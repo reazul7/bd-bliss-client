@@ -7,4 +7,3 @@ it ("renders without crashing", ()=> {
     ReactDOM.render(<Login />, div);
     ReactDOM.unmountComponentAtNode(div);
 })
-
