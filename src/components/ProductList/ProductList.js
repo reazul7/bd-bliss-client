@@ -11,7 +11,7 @@ const ProductList = () => {
 
     const fetchProducts = async () => {
         const response = await axios
-            .get("http://localhost:5050/product")
+            .get("https://obscure-taiga-16258.herokuapp.com/product")
             .catch((err) => {
                 console.log("err", err);
             });
