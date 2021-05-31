@@ -79,10 +79,10 @@ const ProductDetail = () => {
                   <div class="card-body p-5">
                     <p class="card-title">{titiel}</p>
                     <p class="card-text">{price}</p>
-                    <p class="card-text">
+                    {/* <p class="card-text">
                       <small class="text-muted">{category}</small>
                     </p>
-                    <p class="card-text">{description}</p>
+                    <p class="card-text">{description}</p> */}
                     <button className="btn-card">
                       <a href="#">Go to Home</a>
                     </button>
