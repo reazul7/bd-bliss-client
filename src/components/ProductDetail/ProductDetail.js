@@ -10,7 +10,7 @@ import {
 
 const ProductDetail = () => {
   const product = useSelector((state) => state.product);
-  const { imageURL, titiel, price, category, description } = product;
+  const { image, titiel, price, category, description } = product;
   const { id } = useParams();
   console.log(id);
   const dispatch = useDispatch();
@@ -72,17 +72,17 @@ const ProductDetail = () => {
           <div class="card mb-3" style={{ maxWidth: "6000px" }}>
             <div class="row g-0">
               <div class="col-md-4">
-                <img className="img-fluid p-5" src={imageURL} alt="..." />
+                <img className="img-fluid p-5" src={image} alt="..." />
               </div>
               <div class="col-md-8">
                 <div className="pt-5 mt-5">
                   <div class="card-body p-5">
                     <p class="card-title">{titiel}</p>
                     <p class="card-text">{price}</p>
-                    {/* <p class="card-text">
+                    <p class="card-text">
                       <small class="text-muted">{category}</small>
                     </p>
-                    <p class="card-text">{description}</p> */}
+                    <p class="card-text">{description}</p>
                     <button className="btn-card">
                       <a href="#">Go to Home</a>
                     </button>

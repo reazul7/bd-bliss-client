@@ -15,22 +15,22 @@ const Navbar = () => {
                     <a className="nav-link active" aria-current="page" href="#home">Home</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="#pages">Pages</a>
+                    <a className="nav-link" href="#shop">Shop</a>
+                    </li>
+                    <li className="nav-item">
+                    <a className="nav-link" href="#products">Products</a>
                     </li>
                     <li className="nav-item">
                     <a className="nav-link" href="#blog">Blog</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="#shop">Shop</a>
-                    </li>
-                    <li className="nav-item">
-                    <a className="nav-link" href="#portfolio">Portfolio</a>
+                    <a className="nav-link" href="#testimonials">Testimonials</a>
                     </li>
                     <li className="nav-item">
                     <a className="nav-link" href="#contact">Contact</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="#login">LOGIN / REGISTER</a>
+                    <a className="nav-link" href="#login">LogIn</a>
                     </li>
                 </ul>
                 </div>

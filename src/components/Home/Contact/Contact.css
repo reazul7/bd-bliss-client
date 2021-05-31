@@ -1,0 +1,12 @@
+.contact-area{
+    background-color:#ECBA78;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 84%, 75% 84%, 75% 100%, 52% 85%, 0 85%);
+    padding-bottom: 50px;
+}
+.btn-contact{
+    border: none;
+    padding: 5px 15px;
+    border-radius: 15px;
+    color: #ECBA78;
+    font-weight: bold;
+}

@@ -3,19 +3,8 @@ import "./Banner.css";
 
 const Banner = () => {
   return (
-    <div >
-      {/* <div className="banner-area-one d-flex align-items-center">
-        <div className="container ">
-          <div className="row">
-            <h1>AVIATOR <br />VERRES ICEBERG <br /> GLASSES</h1>
-            <p>Looked up one of the more obscure latin words</p>
-            <button className="btn-area w-25">SHOP ALL GLASSES</button>
-          </div>
-        </div>
-      </div> */}
-
-
-      <div className="banner-area-two d-flex align-items-center">
+    <div id="shop" className="mb-5">
+      <div className="banner-area d-flex align-items-center">
         <div className="container ">
           <div className="row">
             <div className="col-md-7"></div>
@@ -29,9 +18,23 @@ const Banner = () => {
         </div>
       </div>
 
-
       {/* banner */}
-
+      {/* <div class="card text-white banner-card">
+        <img src="https://cdn.shopify.com/s/files/1/1215/2782/files/leo_oobliss_banner1-h1.jpg?v=1601088185" class="card-img" alt="..."/>
+        <div class="card-img-overlay ">
+          <div className="container">
+            <div className="row ">
+              <div className="col-md-6"></div>
+              <div className="col-md-6 text-dark ">
+                <h6 className="text-white card-text">WHAT WE'RE ABOUT</h6>
+                <h1>SEE THE WORLD <br />DIFFERENTLY</h1>
+                <p className="text-white card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.Iusto, cum <br />Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                <button className="btn-area">SHOP NOW</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> */}
     </div>
   );
 };

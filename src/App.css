@@ -39,6 +39,7 @@
 
 .nav-link{
   color: black!important;
+  font-size: 20px;
 }
 .nav-link:hover{
   color: #ECBA78!important;
@@ -63,4 +64,13 @@
   border: 1px solid #E1E1E1;
   border-radius: 15px;
   padding: 7px 25px;
+}
+
+.btn-card{
+  background-color: #ECBA78;
+}
+.btn-card a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
