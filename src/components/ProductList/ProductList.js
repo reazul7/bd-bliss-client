@@ -11,7 +11,7 @@ const ProductList = () => {
 
     const fetchProducts = async () => {
         const response = await axios
-            .get("https://fakestoreapi.com/products")
+            .get("http://localhost:5050/product")
             .catch((err) => {
                 console.log("err", err);
             });

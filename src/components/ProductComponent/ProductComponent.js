@@ -6,35 +6,25 @@ const ProductComponent = ({ product }) => {
   //      const products = useSelector((state) => state.allProducts.products);
   //   // console.log(products)
   //   const renderList = products.map((product) => {
-  const { id, title, image, price, category } = product;
+  const { id, title, imageURL, price} = product;
   return (
     <div class="container pt-5">
       <Link
         to={`/product/${id}`}
         style={{ textDecoration: "none", color: "black" }}
       >
-        <div class="col">
-          <div
-            class="card "
-            style={{ height: "33rem", width: "18rem", padding: "20px" }}
-          >
-            <img
-              src={image}
-              class="card-img-top"
-              style={{ height: "150px" }}
-              alt={title}
-            />
-            <div class="card-body">
-              <h5 class="card-title">{title}</h5>
-              <div className="text-center">
-                <p class="card-text fw-bold">Price: {price}$</p>
-                <p class="card-text">Cetegory: {category}</p>
-                <h6 class="card-text">Product id: {id}</h6>
-                <button className="btn-card"><a href="#">Go somewhere</a></button>
-              </div>
-            </div>
+         <div class="col">
+                <div class="card rounded-3 shadow p-3 mb-5 bg-body rounded" style={{height:"25rem", width: '18rem', padding:"20px" }}>
+            <img src={imageURL} class="card-img-top" style={{ width: "250px" }} alt={title} />
+            <div class="card-body text-center">
+                <h5 class="card-title">{title}</h5>
+                <br/>
+              <h4 class="card-text"> {price} </h4>
+               <br/>
+               {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
+             </div>
           </div>
-        </div>
+          </div>
       </Link>
     </div>
   );
