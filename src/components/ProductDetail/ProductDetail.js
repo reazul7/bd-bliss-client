@@ -52,7 +52,7 @@ const ProductDetail = () => {
                     </p>
                     <p class="card-text">{description}</p>
                     <button className="btn-card">
-                      <a href="#">Go to Home</a>
+                      <a href="https://bd-bliss.web.app/">Go to Home</a>
                     </button>
                   </div>
                 </div>
