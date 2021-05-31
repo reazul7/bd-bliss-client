@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { useSelector } from 'react-redux';
+
 
 const ProductComponent = ({ product }) => {
-  //      const products = useSelector((state) => state.allProducts.products);
+
    console.log(product)
-  //   const renderList = products.map((product) => {
+
   const { _id, title, imageURL, price} = product;
   return (
     <div class="container pt-5">
@@ -21,21 +21,14 @@ const ProductComponent = ({ product }) => {
                 <br/>
               <h4 class="card-text"> {price} </h4>
                <br/>
-               {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
+
              </div>
           </div>
           </div>
       </Link>
     </div>
   );
-  // });
-  //   return (
-  //     <div>
-  //     <div>
-  //    { renderList}
-  //    </div>
-  //     </div>
-  // );
+   
 };
 
 export default ProductComponent;
