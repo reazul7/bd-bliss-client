@@ -8,6 +8,11 @@ import {
   selectedProduct,
   removeSelectedProduct,
 } from "../redux/actions/productsActions";
+import { FaFacebookF, FaTwitter, FaPinterestP } from "react-icons/fa";
+import { MdAssignmentTurnedIn } from "react-icons/md";
+import { GrDeliver } from "react-icons/gr";
+import { RiArrowLeftRightFill } from "react-icons/ri";
+
 
 const ProductDetail = () => {
   const product = useSelector((state) => state.product);
@@ -31,9 +36,11 @@ const ProductDetail = () => {
       dispatch(removeSelectedProduct());
     };
   }, [id]);
+
+
   return (
     <div class="container pt-5 text-center">
-      <h2>Product Details</h2>
+      <h1 className="text-color text-center">Product Details</h1>
       {Object.keys(product).length === 0 ? (
         <div className="text-center">
           <button class="btn btn-primary" type="button" disabled>
@@ -54,31 +61,23 @@ const ProductDetail = () => {
           </button>
         </div>
       ) : (
-        <div className="text-center" style={{margin: "auto 0"}}>
-          <div class="card mb-3">
-            <div class="row g-0">
-              <div class="col-md-6">
-                <img className="img-fluid p-5 w-100" src={imageURL} alt="..." />
+        <div>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6">
+                <img className="img-responsive img-fluid" src={imageURL} alt="" />
               </div>
-              <div class="col-md-6">
-                <div className="pt-5 mt-5">
-                  <div class="card-body p-5">
-                    <p class="card-title" style={{fontSize: "30px"}}>{title}</p>
-                    <p class="card-text" style={{color: "#ECBA78", fontSize: "20px", fontWeight: "bold"}}>{price}</p>
-                    <p class="card-text">
-                      <small class="text-muted">{category}</small>
-                    </p>
-                    <p class="card-text">{description}</p>
-                    <div className="service-policy">
-                      <p>Security policy (edit with Customer reassurance module)</p>
-                      <p> Delivery policy (edit with Customer reassurance module)</p>
-                      <p>Return policy (edit with Customer reassurance module)</p>
-                    </div>
-                    <button className="btn-card">
-                      <a href="https://bd-bliss.web.app/">Go to Home</a>
-                    </button>
-                  </div>
-                </div>
+              <div className="col-md-5 offset-md-1" style={{textAlign: "left"}}>
+                <h3 className="pt-5">{title}</h3>
+                <small>Share <span style={{color: "#3b5998"}}><FaFacebookF/></span> <span style={{color: "#00acee"}}><FaTwitter/></span> <span style={{color: "#E60023"}}><FaPinterestP/></span></small>
+                <h4 className="text-color fw-bold pt-2">{price}</h4>
+                <small style={{fontSize:"12px"}}>Regular fit, round neckline, long sleeves. 100% cotton, brushed inner side for extra comfort.</small>
+                <p>{category}</p>
+                <p>{description}</p>
+                <p><MdAssignmentTurnedIn/> <small className="text-secondary">Security policy (edit with Customer reassurance module)</small> </p>
+                <p><GrDeliver/> <small className="text-secondary">Delivery policy (edit with Customer reassurance module)</small></p>
+                <p><RiArrowLeftRightFill/> <small className="text-secondary">Return policy (edit with Customer reassurance module)</small></p>
+                <button className="btn-card" style={{fontWeight: 'bold'}}><a href="https://bd-bliss.web.app/">Go to Home</a></button>
               </div>
             </div>
           </div>
