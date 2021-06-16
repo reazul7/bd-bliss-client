@@ -9,7 +9,7 @@ import { useHistory, useLocation } from "react-router-dom";
 firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
-  const { setLoggedInUser } = useContext(UserContext);
+  const { loggedInUser, setLoggedInUser } = useContext(UserContext);
   const history = useHistory();
   const location = useLocation();
   let { from } = location.state || { from: { pathname: "/" } };
@@ -24,9 +24,12 @@ const Login = () => {
       .auth()
       .signInWithPopup(provider)
       .then((result) => {
+        var credential = result.credential;
+        var token = credential.accessToken;
         var { displayName, email, photoURL } = result.user;
         const signInUser = { name: displayName, email, photo: photoURL };
         setLoggedInUser(signInUser);
+        // localStorage.setItem('user', JSON.stringify(signInUser));
         history.replace(from);
       })
       .catch((error) => {

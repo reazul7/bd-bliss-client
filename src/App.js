@@ -11,9 +11,9 @@ import PrivateRoute from "./components/Login/PrivateRoute";
 export const UserContext = createContext();
 
 function App() {
-  const [setLoggedInUser] = useState({});
+  const [loggedInUser, setLoggedInUser] = useState({});
   return (
-    <UserContext.Provider value={{ setLoggedInUser }}>
+    <UserContext.Provider value={{ loggedInUser, setLoggedInUser }}>
       <Router>
         <Switch>
           <Route exact path="/">
