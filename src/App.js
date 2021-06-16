@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home/Home/Home";
@@ -7,13 +6,14 @@ import ProductList from "./components/ProductList/ProductList";
 import { createContext, useState } from "react";
 import Login from "./components/Login/Login";
 import AddProduct from "./components/Home/AddProduct/AddProduct";
+import PrivateRoute from "./components/Login/PrivateRoute";
 
 export const UserContext = createContext();
 
 function App() {
-  const [loggedInUser, setLoggedInUser] = useState({});
+  const [setLoggedInUser] = useState({});
   return (
-    <UserContext.Provider value={{ loggedInUser, setLoggedInUser }}>
+    <UserContext.Provider value={{ setLoggedInUser }}>
       <Router>
         <Switch>
           <Route exact path="/">
@@ -22,9 +22,9 @@ function App() {
           <Route path="/productList">
             <ProductList />
           </Route>
-          <Route path="/product/:id">
+          <PrivateRoute path="/product/:id">
             <ProductDetail />
-          </Route>
+          </PrivateRoute>
           <Route path="/addProduct">
              <AddProduct/>
           </Route>

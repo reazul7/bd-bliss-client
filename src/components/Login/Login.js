@@ -1,16 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from "./firebase.config";
+import { useContext } from "react";
+import { UserContext } from "../../App";
+import { useHistory, useLocation } from "react-router-dom";
 
-// firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
-    const [user, setUser] = useState({})
+  const { setLoggedInUser } = useContext(UserContext);
+  const history = useHistory();
+  const location = useLocation();
+  let { from } = location.state || { from: { pathname: "/" } };
 
-    if (firebase.apps.length === 0) {
-      firebase.initializeApp(firebaseConfig);
-    }
+  if (firebase.apps.length === 0) {
+    firebase.initializeApp(firebaseConfig);
+  }
 
   var provider = new firebase.auth.GoogleAuthProvider();
   const handleGoogleSignIn = () => {
@@ -18,11 +24,10 @@ const Login = () => {
       .auth()
       .signInWithPopup(provider)
       .then((result) => {
-        var credential = result.credential;
-        var token = credential.accessToken;
-        var user = result.user;
-        console.log(user);
-        setUser(user);
+        var { displayName, email, photoURL } = result.user;
+        const signInUser = { name: displayName, email, photo: photoURL };
+        setLoggedInUser(signInUser);
+        history.replace(from);
       })
       .catch((error) => {
         var errorCode = error.code;
@@ -33,10 +38,13 @@ const Login = () => {
       });
   };
   return (
-    <div className="pt-5" style={{textAlign: 'center'}}>
-      <button onClick={handleGoogleSignIn}>Google SignIn</button>
-      <h3>{user.email}</h3>
-      <img src={user.photoURL} alt="" />
+    <div className="text-center pt-5 mt-5">
+      <button className="btn-card fw-bold" onClick={handleGoogleSignIn}>
+        Continue with Google
+      </button>
+      <button className="btn-card mx-2" style={{ fontWeight: "bold" }}>
+        <a href="https://bd-bliss.web.app/">Go to Home</a>
+      </button>
     </div>
   );
 };
